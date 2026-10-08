@@ -1,0 +1,726 @@
+/* =========================================
+   PIXELLETE PLAYGROUND
+========================================= */
+
+.playground {
+  margin-top: 150px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.playground-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 60px;
+  margin-bottom: 55px;
+}
+
+.playground-eyebrow {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  margin-bottom: 15px;
+}
+
+.playground-heading h2 {
+  font-size: clamp(4rem, 8vw, 8rem);
+  line-height: 0.82;
+  letter-spacing: -0.07em;
+  font-weight: 500;
+  margin: 0;
+}
+
+.playground-heading h2 i {
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
+.playground-intro {
+  max-width: 430px;
+  margin-top: 30px;
+  line-height: 1.6;
+  opacity: 0.6;
+}
+
+
+/* =========================================
+   PALETTE STRIP
+========================================= */
+
+.playground-palette {
+  display: flex;
+  width: 330px;
+  height: 190px;
+  border-radius: 20px;
+  overflow: hidden;
+  transform: rotate(3deg);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+.playground-palette-color {
+  flex: 1;
+  position: relative;
+}
+
+.playground-palette-color span {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  font-size: 0.55rem;
+  font-weight: 700;
+  mix-blend-mode: difference;
+  color: white;
+}
+
+
+/* =========================================
+   TOOL SELECTOR
+========================================= */
+
+.playground-tools {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.playground-tool {
+  position: relative;
+  text-align: left;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: transparent;
+  padding: 25px;
+  min-height: 145px;
+  border-radius: 18px;
+  cursor: pointer;
+  font-family: inherit;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border 0.25s ease;
+}
+
+.playground-tool:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.playground-tool.active {
+  background: #171717;
+  color: white;
+  border-color: #171717;
+}
+
+.tool-icon {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+}
+
+.tool-title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.tool-description {
+  display: block;
+  max-width: 200px;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  opacity: 0.55;
+}
+
+.playground-tool.active .tool-description {
+  opacity: 0.65;
+}
+
+.tool-arrow {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  font-size: 1.1rem;
+}
+
+
+/* =========================================
+   CANVAS
+========================================= */
+
+.playground-canvas {
+  min-height: 650px;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   GENERAL CREATION
+========================================= */
+
+.creation {
+  width: 100%;
+  min-height: 650px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   WEBSITE
+========================================= */
+
+.website-creation {
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.website-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.website-nav strong {
+  font-size: 1.2rem;
+}
+
+.website-nav div {
+  display: flex;
+  gap: 30px;
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+.website-content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.website-content small,
+.creation-copy small {
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  opacity: 0.55;
+}
+
+.website-content h3 {
+  font-size: clamp(3rem, 6vw, 6.5rem);
+  line-height: 0.87;
+  letter-spacing: -0.07em;
+  margin: 18px 0;
+}
+
+.website-content h3 em,
+.creation-copy h3 em {
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
+.website-content p {
+  max-width: 340px;
+  line-height: 1.5;
+  opacity: 0.6;
+  margin-bottom: 25px;
+}
+
+.website-content button {
+  border: none;
+  border-radius: 100px;
+  padding: 15px 23px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.website-orb {
+  width: min(32vw, 350px);
+  aspect-ratio: 1;
+  border-radius: 47% 53% 61% 39% / 41% 44% 56% 59%;
+  display: grid;
+  place-items: center;
+  transform: rotate(-10deg);
+  margin: auto;
+}
+
+.website-orb div {
+  width: 62%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.website-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6rem;
+  opacity: 0.5;
+}
+
+
+/* =========================================
+   SOCIAL
+========================================= */
+
+.social-creation {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  align-items: center;
+  gap: 80px;
+  padding: 70px;
+}
+
+.social-phone {
+  width: min(300px, 70vw);
+  margin: auto;
+  padding: 14px;
+  border-radius: 35px;
+  background: var(--c5);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.18);
+}
+
+.phone-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 10px 14px;
+  font-size: 0.6rem;
+}
+
+.social-post {
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.social-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px;
+  font-size: 0.7rem;
+}
+
+.social-user span {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.social-art {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+}
+
+.social-art em {
+  font-family: Georgia, serif;
+}
+
+.social-caption {
+  padding: 15px;
+  font-size: 0.7rem;
+  line-height: 1.5;
+}
+
+.creation-copy h3 {
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 0.88;
+  letter-spacing: -0.07em;
+  margin: 15px 0 25px;
+}
+
+.creation-copy p {
+  max-width: 350px;
+  line-height: 1.6;
+  opacity: 0.6;
+}
+
+
+/* =========================================
+   BRANDING
+========================================= */
+
+.branding-creation {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  align-items: center;
+  gap: 80px;
+  padding: 80px;
+}
+
+.business-card {
+  width: min(380px, 80vw);
+  aspect-ratio: 1.6;
+  padding: 35px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.2);
+}
+
+.brand-star {
+  font-size: 2rem;
+}
+
+.business-card strong {
+  font-size: 2rem;
+  letter-spacing: 0.15em;
+}
+
+.business-card p {
+  font-size: 0.7rem;
+  opacity: 0.55;
+  margin-top: 5px;
+}
+
+.business-card small {
+  font-size: 0.5rem;
+  letter-spacing: 0.15em;
+  opacity: 0.5;
+}
+
+.mini-swatches {
+  display: flex;
+  gap: 8px;
+}
+
+.mini-swatches span {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+
+/* =========================================
+   FASHION
+========================================= */
+
+.fashion-creation {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr 0.3fr;
+  align-items: center;
+  gap: 40px;
+  padding: 80px;
+}
+
+.fashion-copy {
+  color: var(--c5);
+}
+
+.fashion-copy small {
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+}
+
+.fashion-copy h3 {
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.07em;
+  margin: 15px 0 25px;
+}
+
+.fashion-copy h3 em {
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
+.fashion-copy p {
+  max-width: 280px;
+  line-height: 1.5;
+  opacity: 0.6;
+}
+
+.outfit {
+  position: relative;
+  width: 260px;
+  height: 450px;
+  margin: auto;
+}
+
+.person-head {
+  position: absolute;
+  width: 70px;
+  height: 80px;
+  border-radius: 50%;
+  top: 0;
+  left: 95px;
+}
+
+.person-top {
+  position: absolute;
+  width: 155px;
+  height: 190px;
+  top: 65px;
+  left: 52px;
+  border-radius: 45px 45px 25px 25px;
+}
+
+.person-pants {
+  position: absolute;
+  width: 130px;
+  height: 180px;
+  top: 245px;
+  left: 65px;
+  border-radius: 10px 10px 25px 25px;
+}
+
+.person-shoes {
+  position: absolute;
+  top: 410px;
+  left: 45px;
+  display: flex;
+  gap: 55px;
+}
+
+.person-shoes span {
+  width: 75px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.fashion-swatches {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.fashion-swatches span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+
+/* =========================================
+   INTERIOR
+========================================= */
+
+.interior-creation {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 70px;
+  padding: 70px;
+}
+
+.room {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.room-wall {
+  position: absolute;
+  inset: 0 0 25% 0;
+}
+
+.room-floor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 25%;
+}
+
+.wall-art {
+  position: absolute;
+  width: 120px;
+  height: 160px;
+  top: 70px;
+  left: 18%;
+  transform: rotate(3deg);
+}
+
+.sofa {
+  position: absolute;
+  width: 280px;
+  height: 120px;
+  bottom: 70px;
+  left: 25%;
+  border-radius: 25px 25px 10px 10px;
+}
+
+.sofa-leg {
+  position: absolute;
+  width: 12px;
+  height: 45px;
+  bottom: 28px;
+}
+
+.sofa-leg.left {
+  left: 31%;
+}
+
+.sofa-leg.right {
+  left: 67%;
+}
+
+.plant {
+  position: absolute;
+  right: 15%;
+  bottom: 50px;
+  width: 100px;
+  height: 200px;
+}
+
+.plant-stem {
+  position: absolute;
+  width: 6px;
+  height: 150px;
+  bottom: 0;
+  left: 50%;
+  background: var(--c5);
+}
+
+.plant-leaf {
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  border-radius: 100% 0;
+}
+
+.plant-leaf.one {
+  top: 45px;
+  left: 15px;
+  transform: rotate(-25deg);
+}
+
+.plant-leaf.two {
+  top: 75px;
+  right: 5px;
+  transform: rotate(25deg);
+}
+
+.interior-copy {
+  color: var(--c5);
+}
+
+
+/* =========================================
+   PACKAGING
+========================================= */
+
+.packaging-creation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+  padding: 80px;
+}
+
+.package-box {
+  width: min(330px, 70vw);
+  aspect-ratio: 0.85;
+  margin: auto;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 25px 30px 60px rgba(0, 0, 0, 0.2);
+  transform: rotate(-5deg);
+}
+
+.package-symbol {
+  font-size: 2rem;
+}
+
+.package-box strong {
+  font-size: 2rem;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.package-box small {
+  font-size: 0.5rem;
+  letter-spacing: 0.15em;
+  opacity: 0.5;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .playground-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .playground-tools {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .social-creation,
+  .branding-creation,
+  .interior-creation,
+  .packaging-creation {
+    grid-template-columns: 1fr;
+  }
+
+  .fashion-creation {
+    grid-template-columns: 1fr;
+  }
+
+  .fashion-swatches {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .website-content {
+    grid-template-columns: 1fr;
+  }
+
+  .website-orb {
+    width: 220px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .playground {
+    margin-top: 90px;
+  }
+
+  .playground-tools {
+    grid-template-columns: 1fr;
+  }
+
+  .playground-palette {
+    width: 100%;
+  }
+
+  .playground-canvas {
+    border-radius: 18px;
+  }
+
+  .website-creation,
+  .social-creation,
+  .branding-creation,
+  .fashion-creation,
+  .interior-creation,
+  .packaging-creation {
+    padding: 35px 25px;
+  }
+
+}
